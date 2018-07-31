@@ -8,5 +8,8 @@
     "name": "Manuel Rauber",
     "email": "manuel.rauber@thinktecture.com",
     "url": "https://manuel-rauber.com"
+  },
+  "config": {
+    "posts_per_page": 15
   }
 }

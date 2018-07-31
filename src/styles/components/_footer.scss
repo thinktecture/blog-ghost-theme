@@ -1,4 +1,5 @@
 @import '../common/variables';
+@import '../common/utils';
 
 .footer {
   background-color: $secondary-color;
@@ -13,6 +14,8 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    padding-left: $content-padding;
+    padding-right: $content-padding;
 
     .info-col {
       flex: 1.1;
@@ -45,7 +48,8 @@
   }
 
   .copy {
-    max-width: $content-max-width;
+    @include content();
+
     margin-left: auto;
     margin-right: auto;
     display: block;

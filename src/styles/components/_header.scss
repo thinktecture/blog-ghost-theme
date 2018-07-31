@@ -1,4 +1,5 @@
 @import '../common/variables';
+@import '../common/utils';
 
 .header {
   background-color: $primary-color;
@@ -6,19 +7,27 @@
   padding-bottom: 50px;
 
   .content {
-    max-width: $content-max-width;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     color: $text-color-white;
 
+    @include content();
+
+    @include media('<=tablet') {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
     .info-section {
       h1 {
-        font-size: 30px;
+        font-size: $h1-font-size * 1.75;
         font-weight: bold;
+        margin-bottom: 0;
       }
       h2 {
-        font-size: 30px;
+        font-size: $h1-font-size * 1.75;
         color: $text-color-black;
         font-weight: bold;
       }
@@ -34,6 +43,10 @@
         img {
           width: 100px;
         }
+
+        @include media('<=tablet') {
+          display: none;
+        }
       }
 
       nav {
@@ -44,7 +57,7 @@
 
         .nav {
           display: flex;
-          font-size: $h1-font-size;
+          font-size: $h2-font-size;
           font-weight: 600;
 
           li {

@@ -1,9 +1,13 @@
 @import '~reset-css/sass/reset';
 @import './common/variables';
-
 @import './components/index';
 @import './common/typography';
 @import './common/social';
+@import './common/utils';
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: $page-background-color;
@@ -24,22 +28,32 @@ strong {
 section {
   &.content {
     max-width: $content-max-width;
-    margin: 50px auto;
+    margin: 2rem auto;
     display: flex;
     width: 100%;
+    padding-left: $content-padding;
+    padding-right: $content-padding;
 
     main {
       display: flex;
 
       &.two-columns {
-        div{
-          &:first-child  {
+        > div {
+          &:first-child {
             width: 25%;
             margin-right: 3rem;
+
+            @include media('<=desktop') {
+              display: none;
+            }
           }
 
           &:nth-child(2) {
             width: 75%;
+
+            @include media('<=desktop') {
+              width: 100%;
+            }
           }
         }
       }

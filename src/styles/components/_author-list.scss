@@ -12,10 +12,11 @@
       }
 
       .bio {
-        margin-top: 1.25rem;
+        margin-top: 0.8rem;
         line-height: $line-height;
         background-color: $text-color-white;
-        padding: 8px;
+        padding: 1rem;
+        margin-bottom: 0.8rem;
       }
 
       .social-links {
@@ -24,6 +25,10 @@
           font-size: $h3-font-size;
         }
       }
+    }
+
+    + section {
+      margin-top: 2rem;
     }
   }
 }

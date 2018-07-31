@@ -1,0 +1,14 @@
+@import 'variables';
+
+$breakpoints: (
+  'tablet': 768px,
+  'desktop': $content-max-width
+);
+
+@import '~include-media/dist/include-media';
+
+@mixin content() {
+  max-width: $content-max-width;
+  padding-left: $content-padding;
+  padding-right: $content-padding;
+}

@@ -15,7 +15,9 @@
       {{/foreach}}
     {{/get}}
   </div>
-  <div>
-    <h1>Here comes content</h1>
+  <div class="post-feed">
+    {{#foreach posts}}
+      {{> post-card}}
+    {{/foreach}}
   </div>
 </main>
