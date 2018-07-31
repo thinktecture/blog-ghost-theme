@@ -1,0 +1,53 @@
+@import '../common/variables';
+
+.footer {
+  background-color: $secondary-color;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: $text-color-white;
+
+  .footer-holder {
+    line-height: 15px;
+    font-size: 12px;
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+    .info-col {
+      flex: 1.1;
+      padding-bottom: 30px;
+      margin-right: 75px;
+
+      p {
+        margin-bottom: 15px;
+      }
+    }
+
+    .address-col {
+      display: flex;
+      flex: 1;
+
+      address {
+        width: 50%;
+        margin-right: 17%;
+
+        .title {
+          display: block;
+          font-size: $h2-font-size;
+        }
+
+        + address {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .copy {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}

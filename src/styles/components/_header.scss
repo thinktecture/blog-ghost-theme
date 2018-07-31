@@ -1,0 +1,69 @@
+@import '../common/variables';
+
+.header {
+  background-color: $primary-color;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .content {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    color: $text-color-white;
+
+    .info-section {
+      h1 {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 30px;
+        color: $text-color-black;
+        font-weight: bold;
+      }
+    }
+
+    .navigation-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .logo {
+        img {
+          width: 100px;
+        }
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 25px;
+
+        .nav {
+          display: flex;
+          font-size: $h1-font-size;
+          font-weight: 600;
+
+          li {
+            + li {
+              margin-left: 30px;
+            }
+          }
+        }
+
+        .social-links {
+          margin-bottom: 10px;
+
+          .social-link {
+            svg {
+              height: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

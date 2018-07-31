@@ -38,7 +38,7 @@ gulp.task('copy:assets', () =>
     .pipe(gulp.dest('./theme/assets')),
 );
 
-gulp.task('watch:styles', () => watch('./src/scss/**/*', batch((events, done) => runSequence('styles', done))));
+gulp.task('watch:styles', () => watch('./src/styles/**/*', batch((events, done) => runSequence('styles', done))));
 gulp.task('watch:copy:template', () => watch('./src/**/*.hbs', batch((events, done) => runSequence('copy:template', done))));
 gulp.task('watch:copy:assets', () => watch('./src/assets/**/*', batch((events, done) => runSequence('copy:assets', done))));
 

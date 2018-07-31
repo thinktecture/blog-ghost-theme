@@ -1,0 +1,30 @@
+@import '~reset-css/sass/reset';
+@import './common/variables';
+
+@import './components/index';
+@import './common/typography';
+@import './common/social';
+
+body {
+  background-color: $page-background-color;
+  font-size: 12px;
+  line-height: 1.1666;
+  font-family: 'Poppins', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  max-width: 100vw;
+}
+
+strong {
+  font-weight: 600;
+}
+
+section {
+  .content {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

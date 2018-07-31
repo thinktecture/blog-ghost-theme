@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>{{meta_title}}</title>
+  <meta name="HandheldFriendly" content="True"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+
+  {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+
+  <header class="header">
+    <div class="content">
+      <div class="info-section">
+        <h1>Blogchain</h1>
+        <h2>thinktecture</h2>
+      </div>
+      <div class="navigation-section">
+        <div class="logo">
+          <img src="{{asset "logo_weiss_vector.svg"}}">
+        </div>
+        <nav>
+          <div class="social-links">
+            {{#if @blog.facebook}}
+              <a class="social-link social-link-fb" href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+            {{/if}}
+            {{#if @blog.twitter}}
+              <a class="social-link social-link-tw" href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+            {{/if}}
+          </div>
+          {{navigation}}
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="content">
+    {{{body}}}
+  </section>
+
+  <footer class="footer">
+    <div class="footer-holder">
+      <div class="info-col">
+        <p>Our main office is located in southern Germany. Together with our associates, we work with clients throughout Europe and the US.</p>
+        <p>For your urgent and highest-priority issues, you can contact our CEOs directly at <a href="tel:4915112475761">+49 151 124 757 61</a> (Ingo Rammer) or <a
+          href="tel:491752914416">+49 175 29 14 416</a> (Christian Weyer).</p>
+      </div>
+      <div class="address-col">
+        <address>
+          <strong class="title">Main Office</strong>
+          Bernhard-Krieg-Str. 4 <br>
+          97845 Neustadt am Main<br>
+          Germany<br>
+          t <a href="tel:+499393993161">+49 9393 99 31 61</a><br>
+          f <a href="tel:+499393993162">+49 9393 99 31 62</a><br>
+          <a href="mailto:office@thinktecture.com">office@thinktecture.com</a>
+        </address>
+        <address>
+          <strong class="title">Office Karlsruhe</strong>
+          Zimmerstr. 6<br>
+          76137 Karlsruhe<br>
+          Germany<br>
+          t <a href="tel:+497217540380">+49 721 75 40 38-0</a><br>
+          f <a href="tel:+4972175403881">+49 721 75 40 38-81</a>
+        </address>
+      </div>
+    </div>
+    <span class="copy">© Copyright Thinktecture AG, {{date format="YYYY"}} &nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://thinktecture.com/imprintContact" style="font-weight: bold">contact &amp; imprint and data protection information</a></span>
+  </footer>
+
+  {{{block "scripts"}}}
+  {{ghost_foot}}
+</body>
+</html>
