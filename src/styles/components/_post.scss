@@ -1,0 +1,27 @@
+@import '../common/variables';
+@import '../common/utils';
+
+main {
+  &.post-full {
+    @include content();
+
+    width: 100%;
+    background-color: $text-color-white;
+    padding: $content-padding;
+
+
+    h1 {
+      color: $primary-color;
+    }
+
+    section {
+      line-height: 1.5;
+
+      p {
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
