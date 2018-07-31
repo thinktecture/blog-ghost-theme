@@ -1,0 +1,29 @@
+@import '../common/variables';
+
+.author-list {
+  section {
+    &.author {
+      img {
+        max-width: 100%;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      .bio {
+        margin-top: 1.25rem;
+        line-height: $line-height;
+        background-color: $text-color-white;
+        padding: 8px;
+      }
+
+      .social-links {
+        .social-link-tw {
+          color: $primary-color;
+          font-size: $h3-font-size;
+        }
+      }
+    }
+  }
+}

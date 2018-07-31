@@ -1,1 +1,21 @@
 {{!< default}}
+
+<main class="two-columns">
+  <div class="author-list">
+    {{#get 'users' limit='all'}}
+      {{#foreach users}}
+        <section class="author">
+          <h1 class="name">{{name}}</h1>
+          <div class="social-links">
+            <a class="social-link social-link-tw" href="{{twitter_url twitter}}" rel="noopener" target="_blank">{{twitter}}</a>
+          </div>
+          <p class="bio">{{bio}}</p>
+          <img src="{{profile_image}}">
+        </section>
+      {{/foreach}}
+    {{/get}}
+  </div>
+  <div>
+    <h1>Here comes content</h1>
+  </div>
+</main>

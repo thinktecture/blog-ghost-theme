@@ -8,7 +8,7 @@
 
   .footer-holder {
     line-height: 15px;
-    font-size: 12px;
+    font-size: $small-font-size;
     max-width: $content-max-width;
     margin-left: auto;
     margin-right: auto;
@@ -34,7 +34,7 @@
 
         .title {
           display: block;
-          font-size: $h2-font-size;
+          font-size: $small-font-size + 2px;
         }
 
         + address {
@@ -49,5 +49,6 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    font-size: $small-font-size;
   }
 }
