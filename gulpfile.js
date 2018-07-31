@@ -18,7 +18,8 @@ const createStylesPipe = sources => sources
     autoprefixer({ browsers: ['last 2 versions'] }),
     cleanCss(),
   ]))
-  .pipe(rename('main.css'));
+  .pipe(rename('main.css'))
+  .pipe(gulp.dest('./theme/assets/css'));
 
 gulp.task('clean', () => del('./theme'));
 
