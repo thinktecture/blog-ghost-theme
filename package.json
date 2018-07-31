@@ -33,6 +33,7 @@
   "homepage": "https://github.com/thinktecture/blockchain-blog-ghost-theme#readme",
   "devDependencies": {
     "autoprefixer": "^9.0.2",
+    "browser-sync": "^2.24.6",
     "concurrently": "^3.6.1",
     "del": "^3.0.0",
     "ghost-cli": "^1.8.1",

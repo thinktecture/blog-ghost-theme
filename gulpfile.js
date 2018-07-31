@@ -9,7 +9,8 @@ const gulp = require('gulp'),
   runSequence = require('run-sequence'),
   del = require('del'),
   watch = require('gulp-watch'),
-  batch = require('gulp-batch');
+  batch = require('gulp-batch'),
+  browserSync = require('browser-sync');
 
 const createStylesPipe = sources => sources
   .pipe(plumber())
@@ -19,7 +20,8 @@ const createStylesPipe = sources => sources
     cleanCss(),
   ]))
   .pipe(rename('main.css'))
-  .pipe(gulp.dest('./theme/assets/css'));
+  .pipe(gulp.dest('./theme/assets/css'))
+  .pipe(browserSync.stream({ match: '**/*.css' }));
 
 gulp.task('clean', () => del('./theme'));
 
@@ -38,6 +40,13 @@ gulp.task('copy:assets', () =>
     .pipe(gulp.dest('./theme/assets')),
 );
 
+gulp.task('watch:init', done => browserSync.init({
+  ghostMode: false,
+  open: true,
+  proxy: 'http://localhost:2368/',
+  reloadDelay: 2000
+}, done));
+
 gulp.task('watch:styles', () => watch('./src/styles/**/*', batch((events, done) => runSequence('styles', done))));
 gulp.task('watch:copy:template', () => watch('./src/**/*.hbs', batch((events, done) => runSequence('copy:template', done))));
 gulp.task('watch:copy:assets', () => watch('./src/assets/**/*', batch((events, done) => runSequence('copy:assets', done))));
@@ -55,6 +64,7 @@ gulp.task('default', done => {
 
 gulp.task('watch', done => {
   runSequence(
+    'watch:init',
     [
       'watch:styles',
       'watch:copy:assets',
