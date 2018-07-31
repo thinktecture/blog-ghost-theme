@@ -1,6 +1,7 @@
 /node_modules
 ghost-installation
-
+/theme
+/theme.zip
 
 # Created by https://www.gitignore.io/api/webstorm
 

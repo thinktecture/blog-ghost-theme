@@ -4,7 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-ghost": "mkdir ghost-installation && (cd ghost-installation && ghost install local)"
+    "install-ghost": "mkdir ghost-installation && (cd ghost-installation && ghost install local)",
+    "ghost-stop": "(cd ghost-installation && ghost stop)",
+    "ghost-start": "(cd ghost-installation && ghost start)",
+    "prelink": "npm run build",
+    "link": "(cd ./ghost-installation/content/themes && rm -rf ./thinktecture-blockchain-blog && ln -s ../../../theme/ ./thinktecture-blogchain-blog)",
+    "build": "gulp",
+    "watch": "npm run watch-theme & npm run watch-ghost",
+    "watch-ghost": "(cd ./ghost-installation && nodemon ./current/index.js --watch ../theme --ext hbs,js,css)",
+    "prewatch-theme": "npm run build",
+    "watch-theme": "gulp watch",
+    "pack-and-validate": "rm -f ./theme.zip && zip -r theme.zip ./theme && gscan -z ./theme.zip"
   },
   "repository": {
     "type": "git",
@@ -22,6 +32,23 @@
   },
   "homepage": "https://github.com/thinktecture/blockchain-blog-ghost-theme#readme",
   "devDependencies": {
-    "ghost-cli": "^1.8.1"
+    "autoprefixer": "^9.0.2",
+    "concurrently": "^3.6.1",
+    "del": "^3.0.0",
+    "ghost-cli": "^1.8.1",
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "node-sass-tilde-importer": "^1.0.2",
+    "nodemon": "^1.18.3",
+    "postcss-clean": "^1.1.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "gscan": "^1.5.0"
   }
 }
