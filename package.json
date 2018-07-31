@@ -1,0 +1,27 @@
+{
+  "name": "blockchain-blog-ghost-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-ghost": "mkdir ghost-installation && (cd ghost-installation && ghost install local)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinktecture/blockchain-blog-ghost-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinktecture/blockchain-blog-ghost-theme/issues"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 8.9 < 9"
+  },
+  "homepage": "https://github.com/thinktecture/blockchain-blog-ghost-theme#readme",
+  "devDependencies": {
+    "ghost-cli": "^1.8.1"
+  }
+}
