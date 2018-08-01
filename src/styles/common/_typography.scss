@@ -66,4 +66,12 @@ a {
     top: 50%;
     transform: translateY(-50%);
   }
+
+  a {
+    color: $primary-color;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
 }
