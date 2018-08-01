@@ -9,16 +9,31 @@
   background-color: $text-color-white;
   padding: $content-padding;
 
-  h1 {
-    color: $primary-color;
-  }
+  article {
+    max-width: 100%;
 
-  section {
-    line-height: 1.5;
+    h1 {
+      color: $primary-color;
+      font-size: $h1-font-size * 1.5;
+      margin-bottom: 3rem;
 
-    p {
-      &:last-child {
-        margin: 0;
+      @include media('<=phone') {
+        font-size: $h1-font-size;
+      }
+    }
+
+    h2, h3, h4, h5, h6 {
+      margin: 4.5rem 0 1.5rem 0;
+    }
+
+    section {
+      line-height: 1.75;
+
+      p {
+        margin-bottom: 2rem;
+        &:last-child {
+          margin: 0;
+        }
       }
     }
   }
@@ -31,10 +46,29 @@
     .author {
       flex-direction: row;
 
+      .author-info {
+        max-width: 100%;
+      }
+
+      @include media('<=tablet') {
+        position: relative;
+
+        figure {
+          position: absolute;
+          display: block;
+          right: 0;
+          min-width: 50px;
+          max-width: 50px;
+          margin: 0;
+        }
+      }
+
       figure {
-        min-width: 150px;
-        max-width: 150px;
-        margin-right: 2rem;
+        @include media('>tablet') {
+          min-width: 150px;
+          max-width: 150px;
+          margin-right: 2rem;
+        }
 
         img {
           border-radius: 50%;
@@ -47,6 +81,21 @@
       }
 
       .social-links {
+
+        @include media('<=phone') {
+          display: block;
+
+          .social-link {
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0;
+
+            + .social-link {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+
         .social-link {
           color: $text-color-black;
           font-size: inherit;

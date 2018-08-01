@@ -55,4 +55,18 @@
     display: block;
     font-size: $small-font-size;
   }
+
+  @include media('<=tablet') {
+    .footer-holder {
+      display: block;
+
+      .info-col {
+        margin: 0;
+      }
+
+      .address-col {
+        margin: 0 0 2rem 0;
+      }
+    }
+  }
 }

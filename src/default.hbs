@@ -16,27 +16,17 @@
 
   <header class="header">
     <div class="content">
-      <div class="info-section">
-        <a href="{{@blog.url}}">
-          <h1>BlogChain</h1>
-          <h2>thinktecture</h2>
-        </a>
-      </div>
-      <div class="navigation-section">
-        <div class="logo">
-          <img src="{{asset "logo_weiss_vector.svg"}}">
-        </div>
+      <div class="top-section">
+        <div class="info">thinktecture blogs</div>
         <nav>
-          <!--  <div class="social-links">
-            {{#if @blog.facebook}}
-              <a class="social-link social-link-facebook" href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-            {{/if}}
-            {{#if @blog.twitter}}
-              <a class="social-link social-link-twitter" href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-            {{/if}}
-          </div>-->
           {{navigation}}
         </nav>
+        <div class="logo">
+          <img src="{{asset "logo_T_weiss_vector.svg"}}">
+        </div>
+      </div>
+      <div class="bottom-section">
+        <a href="{{@blog.url}}"><h1>Blockchain</h1></a>
       </div>
     </div>
   </header>

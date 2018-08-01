@@ -36,6 +36,11 @@ section {
     padding-left: $content-padding;
     padding-right: $content-padding;
 
+    @include media('<=phone') {
+      padding: 0;
+      margin: 0;
+    }
+
     main {
       display: flex;
 

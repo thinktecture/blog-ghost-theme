@@ -1,6 +1,7 @@
 @import 'variables';
 
 $breakpoints: (
+  'phone': 532px,
   'tablet': 768px,
   'desktop': $content-max-width
 );

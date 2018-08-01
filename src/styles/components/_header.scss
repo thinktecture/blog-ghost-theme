@@ -3,68 +3,45 @@
 
 .header {
   background-color: $primary-color;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 2rem 0;
 
   .content {
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    flex-direction: column;
     color: $text-color-white;
 
     @include content();
 
-    @include media('<=tablet') {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .info-section {
-      a {
-        &:focus, &:hover {
-          text-decoration: none;
-        }
-      }
-
-      h1 {
-        font-size: $h1-font-size * 1.75;
-        font-weight: bold;
-        margin-bottom: 0;
-      }
-      h2 {
-        font-size: $h1-font-size * 1.75;
-        color: $text-color-black;
-        font-weight: bold;
-      }
-    }
-
-    .navigation-section {
-      flex: 1;
+    .top-section {
       display: flex;
-      flex-direction: column;
+      flex: 1;
       align-items: flex-end;
 
-      .logo {
-        img {
-          width: 100px;
-        }
+      .info {
+        font-weight: 600;
+        font-size: $h1-font-size;
+        margin-bottom: 0.75rem;
+      }
 
-        @include media('<=tablet') {
-          display: none;
+      .logo {
+        margin-left: 3rem;
+        img {
+          height: 50px;
         }
       }
 
       nav {
+        margin-bottom: 0.75rem;
+        margin-left: auto;
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin-top: 25px;
+        font-size: $h2-font-size;
+        font-weight: 600;
 
         .nav {
+          margin-left: 3rem;
           display: flex;
-          font-size: $h2-font-size;
-          font-weight: 600;
 
           li {
             + li {
@@ -72,15 +49,60 @@
             }
           }
         }
+      }
+    }
 
-        .social-links {
-          margin-bottom: 10px;
+    .bottom-section {
+      margin-top: 6rem;
 
-          .social-link {
-            svg {
-              height: 1.2rem;
-            }
+      a {
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+
+      h1 {
+        margin: 0;
+        font-size: $h1-font-size * 2.75;
+        text-transform: lowercase;
+      }
+    }
+  }
+
+  @include media('<=phone') {
+    .content {
+      position: relative;
+
+      .top-section {
+        flex-direction: column;
+        align-items: center;
+
+        .info {
+          margin: 0;
+        }
+
+        nav {
+          margin: 10rem 0 0 0;
+
+          .nav {
+            margin-left: 0;
           }
+        }
+
+        .logo {
+          display: none;
+        }
+      }
+
+      .bottom-section {
+        position: absolute;
+        text-align: center;
+        margin-top: 3rem;
+        width: 100%;
+        left: 0;
+
+        h1 {
+          font-size: $h1-font-size * 2;
         }
       }
     }
