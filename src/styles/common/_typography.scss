@@ -49,3 +49,21 @@ a {
     text-decoration:underline;
   }
 }
+
+.read-more {
+  margin: 1rem 0 1rem 0;
+  position: relative;
+  padding-left: 26px;
+  color: $primary-color;
+  font-weight: 600;
+
+  &::before {
+    content: '\e900';
+    font: 10px/1 'icomoon';
+    color: $primary-color;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

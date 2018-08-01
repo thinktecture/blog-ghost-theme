@@ -8,6 +8,8 @@
   background-color: $text-color-white;
   color: $text-color-black;
 
+  transition: box-shadow 0.3s ease-in-out;
+
   &:hover {
     box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04);
   }
@@ -44,24 +46,6 @@
   .post-card-excerpt {
     margin-top: 1.4rem;
     line-height: 1.5;
-  }
-
-  .read-more {
-    margin: 1rem 0 1rem 0;
-    position: relative;
-    padding-left: 26px;
-    color: $primary-color;
-    font-weight: 600;
-
-    &::before {
-      content: '\e900';
-      font: 10px/1 'icomoon';
-      color: $primary-color;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
 
   .post-card-meta {

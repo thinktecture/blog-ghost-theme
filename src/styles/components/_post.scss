@@ -1,27 +1,78 @@
 @import '../common/variables';
 @import '../common/utils';
 
-main {
-  &.post-full {
-    @include content();
+.post-full {
+  @include content();
+  counter-reset: image-counter;
 
-    width: 100%;
-    background-color: $text-color-white;
-    padding: $content-padding;
+  width: 100%;
+  background-color: $text-color-white;
+  padding: $content-padding;
 
+  h1 {
+    color: $primary-color;
+  }
 
-    h1 {
-      color: $primary-color;
+  section {
+    line-height: 1.5;
+
+    p {
+      &:last-child {
+        margin: 0;
+      }
     }
+  }
 
-    section {
-      line-height: 1.5;
+  + .post-full {
+    margin-top: 2rem;
+  }
 
-      p {
-        &:last-child {
-          margin: 0;
+  .author-list {
+    .author {
+      flex-direction: row;
+
+      figure {
+        min-width: 150px;
+        max-width: 150px;
+        margin-right: 2rem;
+
+        img {
+          border-radius: 50%;
         }
+      }
+
+      .bio {
+        margin: 0.5rem 0 0 0;
+        padding: 0 0 0 0;
+      }
+
+      .social-links {
+        .social-link {
+          color: $text-color-black;
+          font-size: inherit;
+
+          &:hover, &:focus {
+            text-decoration: none;
+          }
+
+          svg {
+            height: 1.3rem;
+            margin-right: 0.35rem;
+          }
+
+          &.social-link-twitter, &.social-link-facebook {
+            svg {
+              fill: $text-color-black;
+            }
+          }
+        }
+      }
+
+      .read-more {
+        margin: 0.5rem 0 0 0;
       }
     }
   }
 }
+
+

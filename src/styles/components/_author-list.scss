@@ -3,6 +3,9 @@
 .author-list {
   section {
     &.author {
+      display: flex;
+      flex-direction: column;
+
       img {
         max-width: 100%;
       }
@@ -20,7 +23,7 @@
       }
 
       .social-links {
-        .social-link-tw {
+        .social-link-twitter {
           color: $primary-color;
           font-size: $h3-font-size;
         }
@@ -30,5 +33,11 @@
     + section {
       margin-top: 2rem;
     }
+  }
+}
+
+.post-full {
+  .author-list {
+
   }
 }

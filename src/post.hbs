@@ -2,15 +2,48 @@
 
 {{#post}}
 
-<main class="post-full {{post_class}}">
-  <article>
-    <header>
-      <h1>{{title}}</h1>
-    </header>
-    <section>
-      {{content}}
-    </section>
-  </article>
-</main>
+  <main class="post-full {{post_class}}">
+    <article>
+      <header>
+        <h1>{{title}}</h1>
+      </header>
+      <section>
+        {{content}}
+      </section>
+    </article>
+  </main>
+
+  <div class="post-full">
+    <div class="author-list">
+      {{#foreach authors}}
+        <section class="author">
+          <figure>
+            <img src="{{profile_image}}" alt="{{name}}">
+          </figure>
+          <div class="author-info">
+            <h2>{{name}}</h2>
+            <div class="social-links">
+              {{#if location}}
+                <span class="social-link social-link-location">{{> icons/location}} {{location}}</span>
+              {{/if}}
+              {{#if website}}
+                <a href="{{website}}" class="social-link social-link-website">{{> icons/website}} Web</a>
+              {{/if}}
+              {{#if twitter}}
+                <a href="{{twitter_url twitter}}" class="social-link social-link-twitter">{{> icons/twitter}} Twitter</a>
+              {{/if}}
+              {{#if facebook}}
+                <a href="{{facebook_url facebook}}" class="social-link social-link-facebook">{{> icons/facebook}} Facebook</a>
+              {{/if}}
+            </div>
+            <p class="bio">{{bio}}</p>
+            <div class="read-more">
+              read more by {{name}}
+            </div>
+          </div>
+        </section>
+      {{/foreach}}
+    </div>
+  </div>
 
 {{/post}}

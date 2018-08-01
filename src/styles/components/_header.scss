@@ -21,6 +21,12 @@
     }
 
     .info-section {
+      a {
+        &:focus, &:hover {
+          text-decoration: none;
+        }
+      }
+
       h1 {
         font-size: $h1-font-size * 1.75;
         font-weight: bold;

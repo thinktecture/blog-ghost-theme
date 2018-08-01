@@ -7,10 +7,12 @@
         <section class="author">
           <h1 class="name">{{name}}</h1>
           <div class="social-links">
-            <a class="social-link social-link-tw" href="{{twitter_url twitter}}" rel="noopener" target="_blank">{{twitter}}</a>
+            <a class="social-link social-link-twitter" href="{{twitter_url twitter}}" rel="noopener" target="_blank">{{twitter}}</a>
           </div>
           <p class="bio">{{bio}}</p>
-          <img src="{{profile_image}}">
+          <figure>
+            <img src="{{profile_image}}" alt="{{name}}">
+          </figure>
         </section>
       {{/foreach}}
     {{/get}}

@@ -1,0 +1,17 @@
+.kg-image-card {
+  margin: 1.5rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  figcaption {
+    margin-top: 1rem;
+
+    &::before {
+      display: inline;
+      counter-increment: image-counter;
+      content: 'Image ' counter(image-counter) ': ';
+    }
+  }
+}

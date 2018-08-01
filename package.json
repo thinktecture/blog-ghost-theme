@@ -10,7 +10,7 @@
     "prelink": "npm run build",
     "link": "(cd ./ghost-installation/content/themes && rm -rf ./thinktecture-blockchain-blog && ln -s ../../../theme/ ./thinktecture-blogchain-blog)",
     "build": "gulp",
-    "watch": "npm run watch-theme & npm run watch-ghost",
+    "watch": "npm run ghost-stop && npm run watch-theme & npm run watch-ghost",
     "watch-ghost": "(cd ./ghost-installation && nodemon ./current/index.js --watch ../theme --ext hbs,js,css)",
     "prewatch-theme": "npm run build",
     "watch-theme": "gulp watch",
