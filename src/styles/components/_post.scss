@@ -124,4 +124,22 @@
   }
 }
 
+aside {
+  &.read-next {
+    margin: 2rem -1rem -2rem -1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    > article {
+      flex: 1 1 $content-max-width / 3;
+      margin: 0 1rem 2rem;
+
+      + article {
+        &.post-card {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
 

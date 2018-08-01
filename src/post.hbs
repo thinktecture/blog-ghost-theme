@@ -46,4 +46,14 @@
     </div>
   </div>
 
+  <aside class="read-next">
+    {{#next_post}}
+      {{> post-card words=30}}
+    {{/next_post}}
+
+    {{#prev_post}}
+      {{> post-card words=30}}
+    {{/prev_post}}
+  </aside>
+
 {{/post}}
