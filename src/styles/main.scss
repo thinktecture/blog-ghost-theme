@@ -20,6 +20,8 @@ body {
   flex-direction: column;
   min-width: 100vw;
   max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 strong {
