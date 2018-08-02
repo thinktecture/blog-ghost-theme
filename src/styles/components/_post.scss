@@ -25,6 +25,14 @@
     .post-full-meta {
       margin: 0 0 3rem  0;
       color: $secondary-color;
+
+      a {
+        color: $secondary-color;
+
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
     }
 
     h2, h3, h4, h5, h6 {
@@ -40,6 +48,10 @@
           margin: 0;
         }
       }
+    }
+
+    a {
+      color: $primary-color;
     }
   }
 

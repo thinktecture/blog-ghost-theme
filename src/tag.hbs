@@ -1,0 +1,27 @@
+{{!< default}}
+
+<main class="two-columns tag">
+  <div class="author-list">
+    {{#tag}}
+      <section class="author">
+        {{#if feature_image}}
+          <figure>
+            <img src="{{feature_image}}" alt="{{name}}">
+          </figure>
+        {{/if}}
+        <h1 class="name">{{name}}</h1>
+        <div class="social-links">
+          {{plural ../pagination.total empty='posts' singular='% article' plural='% articles'}}
+        </div>
+        <p class="bio">
+          {{description}}
+        </p>
+      </section>
+    {{/tag}}
+  </div>
+  <div class="post-feed">
+    {{#foreach posts}}
+      {{> post-card words=60}}
+    {{/foreach}}
+  </div>
+</main>

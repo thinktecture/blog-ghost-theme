@@ -1,0 +1,49 @@
+@import '../common/variables';
+@import '../common/utils';
+
+.tag {
+  .author {
+    .social-links {
+      color: $primary-color;
+    }
+  }
+}
+
+@include media('<=desktop') {
+  section {
+    &.content {
+      main {
+        &.two-columns {
+          flex-direction: column;
+
+          &.tag {
+            > div {
+              &:first-child {
+                display: block;
+                width: 100%;
+
+                figure {
+                  img {
+                    max-width: 100px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('<=phone') {
+  section {
+    &.content {
+      main {
+        &.tag {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

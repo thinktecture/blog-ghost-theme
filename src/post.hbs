@@ -7,8 +7,8 @@
       <header>
         <h1>{{title}}</h1>
         <h2 class="post-full-meta">
-          <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D. MMMM YYYY"}}</time> /
-          <span class="tag">{{#primary_tag}}{{name}}{{/primary_tag}}</span>
+          <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D. MMMM YYYY"}}</time>
+          {{#primary_tag}}/ <a class="tag" href="{{url}}">{{name}}</a>{{/primary_tag}}
         </h2>
       </header>
       <section>
@@ -69,7 +69,7 @@
               </ul>
             </div>
             <footer class="related-content-footer">
-              <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}} →</a>
+                <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}}</a>
             </footer>
           </article>
         {{/if}}
