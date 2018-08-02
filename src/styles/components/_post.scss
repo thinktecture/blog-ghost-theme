@@ -15,11 +15,16 @@
     h1 {
       color: $primary-color;
       font-size: $h1-font-size * 1.5;
-      margin-bottom: 3rem;
+      margin: 0;
 
       @include media('<=phone') {
         font-size: $h1-font-size;
       }
+    }
+
+    .post-full-meta {
+      margin: 0 0 3rem  0;
+      color: $secondary-color;
     }
 
     h2, h3, h4, h5, h6 {

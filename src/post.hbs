@@ -6,6 +6,10 @@
     <article>
       <header>
         <h1>{{title}}</h1>
+        <h2 class="post-full-meta">
+          <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D. MMMM YYYY"}}</time> /
+          <span class="tag">{{#primary_tag}}{{name}}{{/primary_tag}}</span>
+        </h2>
       </header>
       <section>
         {{content}}
