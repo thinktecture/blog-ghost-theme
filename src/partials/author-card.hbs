@@ -1,0 +1,29 @@
+<section class="author">
+  <figure>
+    <img src="{{profile_image}}" alt="{{name}}">
+  </figure>
+  <div class="author-info">
+    <h2>{{name}}</h2>
+    <div class="social-links">
+      {{#if location}}
+        <span class="social-link social-link-location">{{> icons/location}} {{location}}</span>
+      {{/if}}
+      {{#if website}}
+        <a href="{{website}}" class="social-link social-link-website" rel="noopener" target="_blank">{{> icons/website}} Web</a>
+      {{/if}}
+      {{#if twitter}}
+        <a href="{{twitter_url twitter}}" class="social-link social-link-twitter" rel="noopener" target="_blank">{{> icons/twitter}} Twitter</a>
+      {{/if}}
+      {{#if facebook}}
+        <a href="{{facebook_url facebook}}" class="social-link social-link-facebook" rel="noopener" target="_blank">{{> icons/facebook}} Facebook</a>
+      {{/if}}
+    </div>
+    <p class="bio">{{bio}}</p>
+
+    {{#unless hide-read-more}}
+      <div class="read-more">
+        <a href="{{url}}">read more by {{name}}</a>
+      </div>
+    {{/unless}}
+  </div>
+</section>

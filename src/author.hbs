@@ -1,0 +1,15 @@
+{{!< default}}
+
+<div class="post-full author">
+  <div class="author-list">
+    {{#author}}
+      {{> author-card hide-read-more=true}}
+    {{/author}}
+  </div>
+</div>
+
+<div class="post-feed">
+  {{#foreach posts}}
+    {{> post-card words=60}}
+  {{/foreach}}
+</div>
