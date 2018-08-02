@@ -52,7 +52,7 @@
 
   <aside class="read-next">
     {{#if primary_tag}}
-      {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit=3 as |related_posts|}}
+      {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{comment_id}}" limit=3 as |related_posts|}}
         {{#if related_posts}}
           <article class="post-card related-content">
             <header class="related-content-header">
