@@ -12,6 +12,7 @@
 
 body {
   background-color: $page-background-color;
+  color: $text-color-black;
   font-size: $font-size;
   line-height: $line-height;
   font-family: 'Poppins', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -47,6 +48,11 @@ section {
       display: flex;
 
       &.two-columns {
+        .post-feed {
+          display: flex;
+          flex-direction: column;
+        }
+
         > div {
           &:first-child {
             width: 25%;

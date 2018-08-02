@@ -1,0 +1,14 @@
+@import '../common/variables';
+
+.pagination {
+  display: flex;
+  margin: 2rem auto 0 auto;
+
+  a {
+    color: $text-color-black;
+  }
+
+  .page-number {
+    margin: 0 1rem;
+  }
+}

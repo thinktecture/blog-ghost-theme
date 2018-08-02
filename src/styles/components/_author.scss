@@ -2,4 +2,9 @@
   &.author {
     margin-bottom: 2rem;
   }
+
+  + .post-feed {
+    display: flex;
+    flex-direction: column;
+  }
 }
