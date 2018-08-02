@@ -139,6 +139,49 @@ aside {
           margin-top: 0;
         }
       }
+
+      &.related-content {
+        background-color: $primary-color;
+        flex-direction: column;
+
+        .related-content-header {
+          h1 {
+            color: $text-color-white;
+          }
+
+          .post-card-tags {
+            color: $text-color-white;
+          }
+        }
+
+        .related-content-content {
+          .read-more {
+            &::before {
+              color: $text-color-white;
+            }
+
+            a {
+              color: $text-color-white;
+
+              &:focus, &:hover {
+                color: $text-color-white;
+              }
+            }
+          }
+        }
+
+        .related-content-footer {
+          margin-top: auto;
+
+          a {
+            color: $text-color-white;
+
+            &:focus, &:hover {
+              color: $text-color-white;
+            }
+          }
+        }
+      }
     }
   }
 }

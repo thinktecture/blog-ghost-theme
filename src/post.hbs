@@ -47,6 +47,30 @@
   </div>
 
   <aside class="read-next">
+    {{#if primary_tag}}
+      {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit=3 as |related_posts|}}
+        {{#if related_posts}}
+          <article class="post-card related-content">
+            <header class="related-content-header">
+              {{# ../primary_tag}}
+                <h1>{{name}}</h1>
+                <h2 class="post-card-tags">Related content</h2>
+              {{/../primary_tag}}
+            </header>
+            <div class="related-content-content">
+              <ul>
+                {{#foreach related_posts}}
+                  <li><div class="read-more"><a href="{{url}}">{{title}}</a></div></li>
+                {{/foreach}}
+              </ul>
+            </div>
+            <footer class="related-content-footer">
+              <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}} →</a>
+            </footer>
+          </article>
+        {{/if}}
+      {{/get}}
+    {{/if}}
     {{#next_post}}
       {{> post-card words=30}}
     {{/next_post}}
