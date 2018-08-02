@@ -3,7 +3,7 @@
 $breakpoints: (
   'phone': 532px,
   'tablet': 768px,
-  'desktop': $content-max-width
+  'desktop': 1024px
 );
 
 @import '~include-media/dist/include-media';
