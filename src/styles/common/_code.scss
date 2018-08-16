@@ -1,0 +1,39 @@
+// Contains code overrides for Prism.js
+
+$font-code: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+body {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-family: $font-code;
+    margin: 0.5rem 0 2rem 0;
+  }
+
+  pre {
+    padding: 1em;
+    margin: 0.5rem 0 2rem 0;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    background-color: white;
+    font-size: 0.9rem;
+
+    code {
+      font-family: $font-code;
+      color: #393A34;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      line-height: 1.2em;
+      tab-size: 4;
+      hyphens: none;
+    }
+  }
+
+  .token {
+    &.function {
+      font-weight: normal;
+    }
+  }
+}

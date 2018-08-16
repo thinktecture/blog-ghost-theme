@@ -60,3 +60,19 @@
   </aside>
 
 {{/post}}
+
+{{#contentFor "scripts"}}
+<script>
+  function highlight() {
+    if (!window.Prism) {
+      return;
+    }
+
+    Prism.highlightAll();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    highlight();
+  });
+</script>
+{{/contentFor}}
