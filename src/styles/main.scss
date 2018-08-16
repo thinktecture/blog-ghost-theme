@@ -15,7 +15,7 @@ body {
   color: $text-color-black;
   font-size: $font-size;
   line-height: $line-height;
-  font-family: 'Poppins', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: $font-sans-serif;
 
   display: flex;
   flex-direction: column;

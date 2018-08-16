@@ -39,14 +39,18 @@
   }
 
   .post-card-tags {
+    margin-top: 0.5rem;
     color: $secondary-color;
-    margin-top: 0.2rem;
-    text-transform: lowercase;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-size: $h5-font-size;
+    font-weight: bold;
   }
 
   .post-card-excerpt {
     margin-top: 1.4rem;
     line-height: 1.5;
+    font-family: $font-serif;
   }
 
   .post-card-meta {
