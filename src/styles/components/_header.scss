@@ -42,6 +42,7 @@
         .nav {
           margin-left: 3rem;
           display: flex;
+          list-style-type: none;
 
           li {
             + li {
@@ -69,7 +70,7 @@
     }
   }
 
-  @include media('<=phone') {
+  @include media('<=tablet') {
     .content {
       position: relative;
 

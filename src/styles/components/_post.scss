@@ -17,7 +17,7 @@
       font-size: $h1-font-size * 1.5;
       margin: 0;
 
-      @include media('<=phone') {
+      @include media('<=tablet') {
         font-size: $h1-font-size;
       }
     }
@@ -45,17 +45,20 @@
 
     section {
       line-height: 1.75;
+      font-size: $h2-font-size;
+      opacity: 0.85;
 
       p {
         margin-bottom: 2rem;
-        font-family: $font-serif;
-        font-size: $h3-font-size;
-        line-height: 1.75;
-        opacity: 0.85;
 
         &:last-child {
           margin: 0;
         }
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 3rem;
       }
 
       blockquote {
@@ -119,7 +122,7 @@
 
       .social-links {
 
-        @include media('<=phone') {
+        @include media('<=tablet') {
           display: block;
 
           .social-link {

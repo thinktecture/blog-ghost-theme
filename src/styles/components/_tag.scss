@@ -41,7 +41,7 @@
   }
 }
 
-@include media('<=phone') {
+@include media('<=tablet') {
   section {
     &.content {
       main {
