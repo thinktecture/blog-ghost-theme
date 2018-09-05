@@ -56,9 +56,17 @@
         }
       }
 
-      ul {
+      ul, ol {
         list-style-type: disc;
         margin-left: 3rem;
+
+        + p {
+          margin-top: 2rem;
+        }
+      }
+
+      ol {
+        list-style-type: decimal;
       }
 
       blockquote {
