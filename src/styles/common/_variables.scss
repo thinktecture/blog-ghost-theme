@@ -19,5 +19,10 @@ $h6-font-size: $font-size;
 
 $line-height: 1.16666;
 
-$font-sans-serif: 'Campton', 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-sans-serif: 'Campton-Book', 'Campton', 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-italic: 'Campton-BookItalic', 'Campton', 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-bold: 'Campton-Bold', 'Campton', 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-bold-italic: 'Campton-BoldItalic', 'Campton', 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $font-serif: 'PT Serif', Georgia, serif;
+
+$asset-path: '/assets';

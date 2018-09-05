@@ -1,7 +1,9 @@
+@import './common/variables';
+
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?gh59z');
-  src: url('../fonts/icomoon.eot?gh59z#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?gh59z') format('truetype'), url('../fonts/icomoon.woff?gh59z') format('woff'), url('../fonts/icomoon.svg?gh59z#icomoon') format('svg');
+  src: url('#{$asset-path}/fonts/icomoon/icomoon.eot?gh59z');
+  src: url('#{$asset-path}/fonts/icomoon/icomoon.eot?gh59z#iefix') format('embedded-opentype'), url('#{$asset-path}/fonts/icomoon/icomoon.ttf?gh59z') format('truetype'), url('#{$asset-path}/fonts/icomoon/icomoon.woff?gh59z') format('woff'), url('#{$asset-path}/fonts/icomoon/icomoon.svg?gh59z#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }

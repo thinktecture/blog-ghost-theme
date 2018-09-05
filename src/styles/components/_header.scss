@@ -20,7 +20,7 @@
       align-items: flex-end;
 
       .info {
-        font-weight: 600;
+        font-family: $font-bold;
         font-size: $h1-font-size;
         margin-bottom: 0.75rem;
       }
@@ -37,7 +37,7 @@
         margin-left: auto;
         display: flex;
         font-size: $h2-font-size;
-        font-weight: 600;
+        font-family: $font-bold;
 
         .nav {
           margin-left: 3rem;

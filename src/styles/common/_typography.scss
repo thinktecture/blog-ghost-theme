@@ -7,7 +7,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6,
 .h {
-  font-weight: 600;
+  font-family: $font-bold;
   margin: 0 0 0.5em;
 }
 
@@ -39,8 +39,6 @@ p {
   margin: 0 0 1.25em;
 }
 
-strong{font-weight: 600;}
-
 a {
   color: $text-color-white;
   text-decoration:none;
@@ -55,7 +53,7 @@ a {
   position: relative;
   padding-left: 26px;
   color: $primary-color;
-  font-weight: 600;
+  font-family: $font-bold;
 
   &::before {
     content: '\e900';
@@ -75,3 +73,21 @@ a {
     }
   }
 }
+
+
+body {
+  font-family: $font-sans-serif;
+}
+
+strong{
+  font-family: $font-bold;
+}
+
+em {
+  font-family: $font-bold-italic;
+}
+
+em strong, strong em {
+  font-family: $font-bold-italic;
+}
+
