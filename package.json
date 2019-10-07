@@ -1,6 +1,6 @@
 {
-  "name": "webapplications-blog-ghost-theme",
-  "version": "1.1.3",
+  "name": "thinktecture-blog-ghost-theme",
+  "version": "1.1.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "ghost-stop": "(cd ghost-installation && ghost stop)",
     "ghost-start": "(cd ghost-installation && ghost start)",
     "prelink": "npm run build",
-    "link": "(cd ./ghost-installation/content/themes && rm -rf ./thinktecture-webapplications-blog && ln -s ../../../theme/ ./thinktecture-blogchain-blog)",
+    "link": "(cd ./ghost-installation/content/themes && rm -rf ./thinktecture-blog && ln -s ../../../theme/ ./thinktecture-blog)",
     "build": "gulp",
     "watch": "npm run ghost-stop && npm run watch-theme & npm run watch-ghost",
     "watch-ghost": "(cd ./ghost-installation && nodemon ./current/index.js --watch ../theme --ext hbs,js,css)",
