@@ -1,5 +1,5 @@
 {
-  "name": "thinktecture-blockchain-blog",
+  "name": "thinktecture-blog",
   "version": "1.1.1",
   "engines": {
     "ghost": ">=1.2.0"
