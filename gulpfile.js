@@ -43,7 +43,7 @@ gulp.task('copy:assets', () =>
 gulp.task('watch:init', done => browserSync.init({
   ghostMode: false,
   open: true,
-  proxy: 'http://localhost:2368/',
+  proxy: 'http://localhost:2369/',
   reloadDelay: 2000
 }, done));
 

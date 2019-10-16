@@ -1,6 +1,6 @@
 {
   "name": "thinktecture-blog-ghost-theme",
-  "version": "1.1.4",
+  "version": "1.1.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "engineStrict": true,
   "engines": {
-    "node": ">= 8.9 < 9"
+    "node": ">= 8.16 < 9"
   },
   "homepage": "https://github.com/thinktecture/blog-ghost-theme#readme",
   "devDependencies": {
