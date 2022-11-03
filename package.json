@@ -37,7 +37,7 @@
     "concurrently": "^3.6.1",
     "del": "^3.0.0",
     "ghost-cli": "^1.8.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-batch": "^1.0.5",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
